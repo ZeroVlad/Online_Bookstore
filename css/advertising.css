@@ -1,0 +1,179 @@
+/*---------------------
+--advertising-conteiner
+---------------------*/
+
+.advertising{
+  position: relative;
+
+  display: grid;
+
+  padding: 15px 0;
+
+  grid-column-gap: 15px;
+  grid-template-columns: 3fr 1fr;
+}
+
+.baner.slider{
+  position: relative;
+
+  width: 100%;
+  max-width: 714px;
+  height: 304px;
+}
+
+.slider *{
+  outline: none;
+}
+.slick-list{
+  overflow: hidden;
+}
+.slick-track{
+  display: flex;
+}
+
+.slide{
+  height: 304px;
+}
+
+.slide.book-slide{
+  display: flex;
+
+  background-image: url(../img/background/A_Wanted_Man-background.png);
+}
+
+.slide.book-slide .title{
+  margin: 100px 90px 0 auto;
+
+  line-height: 1.1;
+
+  text-align: center;
+
+  color: #fff;
+}
+
+.slide.book-slide .name{
+  font-size: 47px;
+  font-weight: bold;
+}
+.slide.book-slide .sub-name{
+  font-size: 25px;
+}
+.slide.book-slide .author{
+  font-size: 21px;
+  font-weight: bold;
+  line-height: 1.5;
+}
+
+.slide.none-slide{
+  display: flex;
+
+  font-size: 40px;
+
+  background-color: #bdbdbd;
+
+  align-items: center;
+  justify-content: center;
+}
+
+.slick-arrow{
+  position: absolute;
+  z-index: 3;
+  top: 50%;
+
+  width: 40px;
+  height: 40px;
+
+  font-size: 26px;
+  font-weight: bold;
+
+  text-align: center;
+
+  border-radius: 50%;
+  background-color: #3339;
+}
+
+.slick-arrow.slick-prev{
+  left: 12px;
+}
+
+.slick-arrow.slick-next{
+  right: 12px;
+}
+
+.deal-month{
+  display: flex;
+  flex-direction: column;
+
+  font-family: Segoe WP N;
+
+  text-align: center;
+
+  color: #fff;
+  background-image: url(../img/background/deal_month-backgrount.png);
+
+  align-items: center;
+  justify-content: center;
+}
+
+.deal-month .title{
+  font-size: 27px;
+  font-weight: bold;
+}
+
+.deal-month .name{
+  font-family: Segoe WP;
+  font-size: 15px;
+  font-weight: lighter;
+}
+
+.deal-month .book-cover{
+  display: flex;
+
+  width: 176px;
+  padding: 5px 0 17px;
+
+  background-image: url(../img/background/background_book.png);
+  background-repeat: no-repeat;
+  background-position: bottom;
+
+  justify-content: center;
+}
+
+.deal-month .price{
+  font-size: 29px;
+  font-weight: bold;
+}
+
+.deal-month .discount{
+  font-size: 21px;
+  font-weight: lighter;
+}
+
+.deal-month .buy-now{
+  padding: 0 20px 2px 20px;
+
+  font-size: 19px;
+  font-weight: bold;
+
+  border: 1px solid #52a452;
+  border-radius: 5px;
+  background: linear-gradient(to top, #51a451, #61c261);
+}
+
+.deal-month .buy-now:active{
+  background: #52a452;
+}
+
+@media (max-width: 1000px){
+  .advertising{
+    grid-template-columns: 100%;
+  }
+  .baner.slider{
+    display: none;
+  }
+  .deal-month{
+    height: 304px;
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+}

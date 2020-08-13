@@ -1,0 +1,286 @@
+main{
+  display: grid;
+
+  margin-bottom: 25px;
+
+  grid-column-gap: 7px;
+  grid-template-columns: 200px auto;
+}
+
+@media (max-width: 1000px){
+  main{
+    display: block;
+  }
+}
+
+/*---------------------
+--aside
+---------------------*/
+aside{
+  position: relative;
+
+  padding: 10px 0;
+
+  line-height: 1.5;
+
+  border: 1px solid #d6d6d6;
+}
+
+aside .title{
+  width: 100%;
+  padding: 0 25px;
+
+  font-size: 24px;
+  font-weight: lighter;
+
+  cursor: default;
+
+  color: #6b6969;
+}
+
+.categories-list{
+  transition-duration: 2s;
+}
+
+.categories-name{
+  padding: 0 25px;
+
+  font-family: Segoe WP N;
+  font-size: 17px;
+  font-weight: 700;
+
+  cursor: pointer;
+
+  color: #525252;
+
+  transition-duration: .4s;
+}
+
+.categories-name:hover,
+.sub-categories-list li:hover{
+  color: #fff;
+  background: linear-gradient(to top, #79b260, #92d774);
+}
+
+.categories-name.active,
+.sub-categories-list li.active{
+  cursor: default;
+  pointer-events: none;
+
+  color: #fff;
+  background: linear-gradient(to top, #79b260, #92d774);
+}
+
+ul.sub-categories-list{
+  margin-left: 3px;
+}
+
+.sub-categories-list li{
+  padding: 0 25px;
+
+  font-family: Segoe UI Symbol;
+  font-size: 15px;
+
+  cursor: pointer;
+
+  color: #555454;
+
+  transition-duration: .4s;
+}
+
+.sub-categories-list li::after{
+  display: block;
+
+  width: 100%;
+  margin-top: 2px;
+
+  content: '';
+
+  border-bottom: 1px solid #e6e7e8;
+}
+
+@media (max-width: 1000px){
+  aside{
+    padding: 0;
+    margin-bottom: 20px;
+  }
+  aside .title{
+    text-align: center;
+    color: #fff;
+    background: linear-gradient(to top, #79b260, #92d774);
+    cursor: pointer;
+  }
+  .categories-list{
+    height: 0;
+    overflow: hidden;
+  }
+  .categories-list.open{
+    height: 750px;
+  }
+}
+
+/*book-catalog*/
+.book-catalog-block{}
+
+.catalog-nav{
+  display: flex;
+}
+
+.catalog-nav a{
+  display: flex;
+
+  width: 140px;
+  height: 40px;
+
+  font-family: Helvetica LT Std;
+  font-size: 16px;
+  font-weight: lighter;
+
+  text-align: center;
+  vertical-align: middle;
+
+  color: #6b6969;
+  border: 1px solid #d8dce0;
+  background-image: url(../img/background/background-catalog-nav.png);
+  text-shadow: 1px 1px 1px #fff;
+
+  align-items: center;
+  justify-content: center;
+}
+
+.catalog-nav a.active{
+  font-size: 18px;
+  font-weight: bold;
+
+  cursor: default;
+  pointer-events: none;
+
+  color: #464646;
+  border-bottom: none;
+  background: none;
+  text-shadow: none;
+}
+
+.book-catalog{
+  display: grid;
+
+  min-height: 825px;
+  padding: 25px 25px 0;
+
+  border-right: 1px solid #d8dce0;
+  border-bottom: 1px solid #d8dce0;
+  border-left: 1px solid #d8dce0;
+
+  grid-template-columns: repeat(5, 1fr);
+  grid-column-gap: 40px;
+  grid-row-gap: 30px;
+}
+
+@media (max-width: 800px){
+  .book-catalog{
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+@media (max-width: 500px){
+  .book-catalog{
+    grid-template-columns: repeat(3, 1fr);
+  }
+  .catalog-nav a{
+    font-size: 14px;
+  }
+  .catalog-nav a.active{
+    font-size: 16px;
+  }
+}
+
+@media (max-width: 400px){
+  .book-catalog{
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+.book-catalog-item{
+  text-align: center;
+}
+
+.book-catalog-item .book-cover{
+  width: 100%;
+
+  border: 5px solid #fff;
+  border-radius: 5px;
+  box-shadow: 0 0 5px #999;
+}
+
+.book-catalog-item .name{
+  margin: 5px 0;
+
+  font-family: Segoe WP N;
+  font-size: 15px;
+  line-height: 1.3;
+
+  color: #595959;
+}
+
+.book-catalog-item .price{
+  display: block;
+
+  font-family: Helvetica LT Std;
+  font-size: 20px;
+  font-weight: 700;
+
+  color: #f05356;
+}
+
+.pages-nav{
+  display: flex;
+
+  width: 100%;
+
+  grid-column: 1 / -1;
+}
+
+.pages-nav ul{
+  display: block;
+
+  margin-left: auto;
+  margin-bottom: 0;
+
+  list-style: none;
+}
+
+.pages-nav li{
+  display: inline-block;
+
+  width: 24px;
+  height: 28px;
+
+  font-family: Helvetica LT Std;
+  font-size: 15px;
+  font-weight: lighter;
+
+  color: #646464;
+  border-top: 1px solid #d8dce0;
+  border-right: 1px solid #d8dce0;
+  border-bottom: 4px solid #81bd66;
+  border-left: 1px solid #d8dce0;
+}
+
+.pages-nav a{
+  display: flex;
+
+  width: 100%;
+  height: 100%;
+
+  text-align: center;
+  vertical-align: middle;
+
+  align-items: center;
+  justify-content: center;
+
+  transition-duration: .3s;
+}
+
+.pages-nav a:hover{
+	background-color: #81bd66;
+}
