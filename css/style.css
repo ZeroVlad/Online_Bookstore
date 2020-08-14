@@ -285,8 +285,9 @@ header{
   }
   .search-block{
     width: 100%;
-    order: 3;
     margin-top: 20px;
+
+    order: 3;
   }
 }
 
@@ -314,6 +315,7 @@ header{
   .wish-list .star{
     width: 20px;
     height: 20px;
+
     font-size: 10px;
   }
   .wish-list .title{
@@ -372,18 +374,19 @@ nav{
 }
 
 @media (max-width: 900px){
-	nav{
-		height: 80px;
-	}
-	.nav-conteiner{
-		flex-wrap: wrap;
-		justify-content: center;
-	}
-	.nav-item{
-		width: 20%;
-		flex: none;
-		height: 50%;
-	}
+  nav{
+    height: 80px;
+  }
+  .nav-conteiner{
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  .nav-item{
+    width: 20%;
+    height: 50%;
+
+    flex: none;
+  }
 }
 
 @media (max-width: 500px){
@@ -473,9 +476,9 @@ footer{
 
   font-size: 15px;
 
-  background-color: #363636;
-
   text-align: center;
+
+  background-color: #363636;
 }
 
 @media (max-width: 800px){

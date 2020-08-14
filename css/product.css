@@ -1,0 +1,57 @@
+/*---------------------
+--main-conteiner
+---------------------*/
+main{
+  display: grid;
+
+  margin-top: 10px;
+  margin-bottom: 20px;
+
+  grid-gap: 15px;
+}
+
+/*path*/
+.path-block{
+  width: 100%;
+  padding: 7px 17px;
+
+  font-family: Segoe UI Symbol;
+  font-size: 16px;
+
+  color: #a6a6a6;
+  border: 1px solid #dedede;
+  border-radius: 4px;
+  box-shadow: 0 0 3px #999;
+}
+
+.path li{
+  display: inline;
+}
+
+.path li:not(:last-child):after{
+  margin-left: 3px;
+
+  content: '>>';
+}
+
+/*product-panel*/
+.product-panel{
+  display: grid;
+
+  width: 100%;
+  padding: 25px 30px;
+
+  border: 1px solid #dedede;
+  border-radius: 4px;
+  box-shadow: 0 0 3px #999;
+
+  grid-template-columns: 250px auto;
+}
+
+.poster-block{
+	width: 100%;
+}
+
+.poster{
+  border: 1px solid #c8c8c8;
+}
