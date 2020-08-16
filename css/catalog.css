@@ -120,7 +120,9 @@ ul.sub-categories-list{
 }
 
 /*book-catalog*/
-.book-catalog-block{}
+.book-catalog-block{
+  position: relative;
+}
 
 .catalog-nav{
   display: flex;
@@ -162,6 +164,7 @@ ul.sub-categories-list{
 }
 
 .book-catalog{
+  position: relative;
   display: grid;
 
   min-height: 825px;
@@ -174,6 +177,16 @@ ul.sub-categories-list{
   grid-template-columns: repeat(5, 1fr);
   grid-column-gap: 40px;
   grid-row-gap: 30px;
+}
+
+.book-catalog:before{
+  content: "";
+  display: block;
+  position: absolute;
+  width: calc(100% - 555px);
+  border-bottom: 1px solid #d8dce0;
+  top: -1px;
+  right: 0;
 }
 
 @media (max-width: 800px){
