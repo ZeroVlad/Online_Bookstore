@@ -50,10 +50,9 @@ aside .title{
   font-weight: 700;
 
   cursor: pointer;
+  transition-duration: .4s;
 
   color: #525252;
-
-  transition-duration: .4s;
 }
 
 .categories-name:hover,
@@ -82,10 +81,9 @@ ul.sub-categories-list{
   font-size: 15px;
 
   cursor: pointer;
+  transition-duration: .4s;
 
   color: #555454;
-
-  transition-duration: .4s;
 }
 
 .sub-categories-list li::after{
@@ -101,18 +99,20 @@ ul.sub-categories-list{
 
 @media (max-width: 1000px){
   aside{
-    padding: 0;
     margin-bottom: 20px;
+    padding: 0;
   }
   aside .title{
+    cursor: pointer;
     text-align: center;
+
     color: #fff;
     background: linear-gradient(to top, #79b260, #92d774);
-    cursor: pointer;
   }
   .categories-list{
-    height: 0;
     overflow: hidden;
+
+    height: 0;
   }
   .categories-list.open{
     height: 750px;
@@ -143,7 +143,7 @@ ul.sub-categories-list{
 
   color: #6b6969;
   border: 1px solid #d8dce0;
-  background-image: url(../img/background/background-catalog-nav.png);
+  background: linear-gradient(to top, #e2e2e2, #fff);
   text-shadow: 1px 1px 1px #fff;
 
   align-items: center;
@@ -165,6 +165,7 @@ ul.sub-categories-list{
 
 .book-catalog{
   position: relative;
+
   display: grid;
 
   min-height: 825px;
@@ -180,13 +181,17 @@ ul.sub-categories-list{
 }
 
 .book-catalog:before{
-  content: "";
-  display: block;
   position: absolute;
-  width: calc(100% - 555px);
-  border-bottom: 1px solid #d8dce0;
   top: -1px;
   right: 0;
+
+  display: block;
+
+  width: calc(100% - 555px);
+
+  content: '';
+
+  border-bottom: 1px solid #d8dce0;
 }
 
 @media (max-width: 800px){
@@ -256,8 +261,8 @@ ul.sub-categories-list{
 .pages-nav ul{
   display: block;
 
-  margin-left: auto;
   margin-bottom: 0;
+  margin-left: auto;
 
   list-style: none;
 }
@@ -285,15 +290,14 @@ ul.sub-categories-list{
   width: 100%;
   height: 100%;
 
+  transition-duration: .3s;
   text-align: center;
   vertical-align: middle;
 
   align-items: center;
   justify-content: center;
-
-  transition-duration: .3s;
 }
 
 .pages-nav a:hover{
-	background-color: #81bd66;
+  background-color: #81bd66;
 }

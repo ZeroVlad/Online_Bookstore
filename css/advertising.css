@@ -38,7 +38,7 @@
 .slide.book-slide{
   display: flex;
 
-  background-image: url(../img/background/A_Wanted_Man-background.png);
+  background-image: url(../img/background/A_Wanted_Man-background.jpg);
 }
 
 .slide.book-slide .title{
@@ -109,7 +109,7 @@
   text-align: center;
 
   color: #fff;
-  background-image: url(../img/background/deal_month-backgrount.png);
+  background-image: url(../img/background/deal_month-backgrount.jpg);
 
   align-items: center;
   justify-content: center;
